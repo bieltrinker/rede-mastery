@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/main.ico" />
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Meta Tags e Título -->
+    <meta name="description" content="Dragon Block C Servidor - Rede Mastery" />
+    <meta name="keywords" content="Dragon Block C, Servidor, Rede Mastery, Minecraft, Jogo, Comunidade" />
+    <meta name="author" content="Rede Mastery" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#FF5722" />
+    <meta property="og:title" content="Dragon Block Servidor - Rede Mastery" />
+    <meta property="og:description" content="Junte-se um dos maiores servidor de Dragon Block do mundo com mais de 100 jogadores online!" />
+    <meta property="og:image" content="assets/images/main.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Rede Mastery" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="Dragon Block Servidor - Rede Mastery" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Dragon Block Servidor - Rede Mastery" />
+    <title>Dragon Block Servidor - Rede Mastery</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Video.js CSS -->
+    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+
+    <!-- Opcional: tema customizado -->
+    <link href="https://vjs.zencdn.net/7.20.3/videojs-theme-city/index.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- AOS Animation CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <!-- Lottie (Bodymovin) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js" defer></script>
+  </head>
+  <body class="bg-white">
+    <!-- MODAL DE EXPERIÊNCIA (Design Diferenciado) -->
+    <div id="betterExperienceModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden modal">
+      <div class="modal-content bg-white bg-opacity-90 backdrop-filter backdrop-blur-md rounded-2xl p-8 text-center transform transition-all duration-500 max-w-md w-full shadow-2xl">
+        <h2 class="text-3xl font-bold text-blue-700 mb-4">Experiência Inclusa</h2>
+        <p class="mb-6 text-gray-700">Gostaria de uma experiência melhor em nosso site? Ativaremos uma música especial para você!</p>
+        <div class="flex justify-center gap-6">
+          <button id="yesBtn" class="px-6 py-3 bg-green-500 text-white rounded-full shadow-lg transition transform hover:scale-110 hover:bg-green-600 focus:outline-none">Sim</button>
+          <button id="noBtn" class="px-6 py-3 bg-red-500 text-white rounded-full shadow-lg transition transform hover:scale-110 hover:bg-red-600 focus:outline-none">Não</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- HEADER (Full Screen) -->
+    <header id="header" class="relative text-white text-center overflow-hidden h-screen">
+      <!-- Vídeo de Fundo -->
+      <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+        <source src="assets/videos/video4.mp4" type="video/mp4" />
+        Seu navegador não suporta a reprodução de vídeo.
+      </video>
+      <!-- Overlay -->
+      <div class="absolute top-0 left-0 w-full h-full bg-black opacity-70"></div>
+      <!-- Conteúdo do Header -->
+      <div class="relative z-10 flex flex-col items-center justify-center w-full h-full">
+        <!-- Logo/Animação principal -->
+        <img src="assets/images/main.gif" alt="Animação principal" class="levitando mb-6 w-64 h-auto transition transform hover:scale-105" data-aos="zoom-in" data-aos-delay="100" />
+        <!-- Título e Descrição -->
+        <h1 class="text-4xl md:text-5xl font-bold" data-aos="fade-up" data-aos-delay="200">
+          O MAIOR SERVIDOR DE DRAGON BLOCK DO MUNDO
+        </h1>
+        <p class="mt-4 text-lg md:text-xl" data-aos="fade-up" data-aos-delay="400">
+          Jogue com mais de <span id="dynamic-player-count">50</span> jogadores online agora!
+        </p>
+        <!-- Botão (Discord) com animação extra -->
+        <button class="mt-6 bg-white text-black font-semibold py-2 px-4 rounded-full shadow-md flex items-center mx-auto transition duration-300 transform hover:scale-105 hover:bg-gray-200 hover:shadow-xl button-animate" data-aos="zoom-in" data-aos-delay="600">
+          <i class="fab fa-discord text-2xl mr-2"></i>
+          <span>Junte-se a nossa comunidade em nosso Discord</span>
+        </button>
+      </div>
+      <!-- Indicador de Scroll: Seta animada -->
+      <div class="absolute bottom-4 left-0 right-0 z-20 flex justify-center">
+        <img src="assets/images/arrow.png" alt="Scroll Down" class="arrow-animate w-12 h-auto" />
+      </div>
+    </header>
+
+    <!-- Sections (Scroll Normal) -->
+    <section id="transformations" class="bg-white text-center py-20 px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-orange-500" data-aos="fade-right" data-aos-delay="200">
+          NOVAS TRANSFORMAÇÕES
+        </h2>
+        <p class="mt-2 text-lg md:text-xl text-gray-700" data-aos="fade-right" data-aos-delay="400">
+          CUSTOMIZADAS E EXCLUSIVAS
+        </p>
+        <div class="mt-8">
+          <video class="mx-auto rounded-lg shadow-lg transition duration-300 transform hover:scale-105" data-aos="zoom-in" data-aos-delay="600" autoplay loop muted playsinline>
+            <source src="assets/videos/video1.mp4" type="video/mp4" />
+            Seu navegador não suporta a reprodução de vídeo.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <section id="novidades" class="bg-gray-100 text-center py-20 px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-orange-500" data-aos="fade-right" data-aos-delay="200">
+          NOVIDADES
+        </h2>
+        <p class="mt-2 text-lg md:text-xl text-gray-700" data-aos="fade-right" data-aos-delay="400">
+          FIQUE POR DENTRO DAS ÚLTIMAS ATUALIZAÇÕES
+        </p>
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-lg transition duration-300 transform hover:scale-105" data-aos="flip-left" data-aos-delay="600">
+            <img alt="Update image 1" class="w-full h-48 object-cover rounded-lg" src="assets/images/vip.gif" />
+            <h3 class="mt-4 text-2xl font-bold text-gray-800">Vips Exclusivos!</h3>
+            <p class="mt-2 text-gray-600">
+              Tenha vantagens ÚNICAS com os nossos vips! Além de visuais incríveis, você terá acesso a habilidades e poderes que vão te deixar no topo!
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-lg transition duration-300 transform hover:scale-105" data-aos="flip-right" data-aos-delay="600">
+            <img alt="Update image 2" class="w-full h-48 object-cover rounded-lg" src="assets/images/effect2.png" />
+            <h3 class="mt-4 text-2xl font-bold text-gray-800">Novas Evoluções</h3>
+            <p class="mt-2 text-gray-600">
+              Tenha uma evolução rápida com a nova atualização!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="batalhas-epicas" class="bg-orange-500 text-white text-center py-20 px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold" data-aos="fade-right" data-aos-delay="200">
+          ENFRENTE BATALHAS ÉPICAS
+        </h2>
+        <p class="mt-2 text-lg md:text-xl" data-aos="fade-right" data-aos-delay="400">
+          E MOSTRE SUA FORÇA
+        </p>
+        <div class="mt-8">
+          <video class="mx-auto rounded-lg shadow-lg transition duration-300 transform hover:scale-105" data-aos="zoom-in" data-aos-delay="600" autoplay loop muted playsinline>
+            <source src="assets/videos/video2.mp4" type="video/mp4" />
+            Seu navegador não suporta a reprodução de vídeo.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white text-center py-20 px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-orange-500" data-aos="fade-right" data-aos-delay="200">
+          PORQUE ESCOLHER A REDE MASTERY?
+        </h2>
+        <div class="mt-8 space-y-6 text-left max-w-3xl mx-auto">
+          <div class="flex items-center bg-gray-100 p-4 rounded-lg transition duration-300 transform hover:scale-105" data-aos="fade-up" data-aos-delay="300">
+            <img src="assets/images/check.png" alt="Goku Icon" class="w-16 h-16 mr-4" />
+            <div>
+              <h3 class="text-xl font-bold">Jogadores</h3>
+              <p class="text-gray-700">Temos diariamente mais de 200 players ativos em nosso discord!</p>
+            </div>
+          </div>
+          <div class="flex items-center bg-gray-100 p-4 rounded-lg transition duration-300 transform hover:scale-105" data-aos="fade-up" data-aos-delay="400">
+            <img src="assets/images/check.png" alt="Super Saiyan Icon" class="w-16 h-16 mr-4" />
+            <div>
+              <h3 class="text-xl font-bold">Maior comunidade</h3>
+              <p class="text-gray-700">Entre em nossa comunidade de server Dragon Block no Discord com mais de 200 membros.</p>
+            </div>
+          </div>
+          <div class="flex items-center bg-gray-100 p-4 rounded-lg transition duration-300 transform hover:scale-105" data-aos="fade-up" data-aos-delay="500">
+            <img src="assets/images/check.png" alt="Super Saiyan Icon" class="w-16 h-16 mr-4" />
+            <div>
+              <h3 class="text-xl font-bold">Competitivo</h3>
+              <p class="text-gray-700">Para os apaixonados por competição, temos torneios com premiações que fazem qualquer guerreiro tremer!</p>
+            </div>
+          </div>
+          <div class="flex items-center bg-gray-100 p-4 rounded-lg transition duration-300 transform hover:scale-105" data-aos="fade-up" data-aos-delay="600">
+            <img src="assets/images/check.png" alt="Goku casual Icon" class="w-16 h-16 mr-4" />
+            <div>
+              <h3 class="text-xl font-bold">Casual</h3>
+              <p class="text-gray-700">Seja você um veterano ou um novato, nosso server é para todos os níveis de habilidade.</p>
+            </div>
+          </div>
+          <div class="flex items-center bg-gray-100 p-4 rounded-lg transition duration-300 transform hover:scale-105" data-aos="fade-up" data-aos-delay="700">
+            <img src="assets/images/check.png" alt="Goku phone Icon" class="w-16 h-16 mr-4" />
+            <div>
+              <h3 class="text-xl font-bold">Quer jogar no Celular?</h3>
+              <p class="text-gray-700">Acesse nosso server pelo celular – a diversão não tem limites!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-orange-500 text-white text-center py-20 px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold" data-aos="fade-right" data-aos-delay="200">
+          JUNTE-SE A MAIS DE 200 JOGADORES EM NOSSA COMUNIDADE
+        </h2>
+        <p class="mt-2 text-lg md:text-xl" data-aos="fade-right" data-aos-delay="400">
+          TÁ ESPERANDO O QUÊ?
+        </p>
+        <!-- Em seu HTML -->
+        <video
+          id="advanced-video"
+          class="video-js vjs-big-play-centered vjs-theme-city mx-auto rounded-lg shadow-lg"
+          preload="auto"
+          width="560"
+          height="315"
+          poster="assets/images/video-poster.jpg"
+          data-setup='{
+            "autoplay": false,
+            "controls": true,
+            "bigPlayButton": true,
+            "playbackRates": [0.5,1,1.5,2],
+            "controlBar": {
+              "children": ["playToggle"]
+            }
+          }'
+          >
+          <source src="assets/videos/abertura.mp4" type="video/mp4" />
+          <p class="vjs-no-js">
+            Ative o JavaScript e use um navegador que suporte HTML5 para ver este vídeo.
+          </p>
+        </video>
+        <p class="mt-8 text-lg" data-aos="fade-up" data-aos-delay="800">
+          Estamos aqui para te ajudar a acessar o servidor sem complicações.
+        </p>
+        <div class="flex justify-center space-x-4 mt-6" data-aos="fade-up" data-aos-delay="900">
+          <a href="https://discord.redemastery.site" target="_blank" class="bg-white text-black font-semibold py-2 px-4 rounded-full shadow-md flex items-center transition duration-300 transform hover:scale-105">
+            <i class="fab fa-discord text-2xl mr-2"></i>Discord
+          </a>
+          <a href="https://wa.me/5511999999999" target="_blank" class="bg-green-500 text-white font-semibold py-2 px-4 rounded-full shadow-md flex items-center transition duration-300 transform hover:scale-105">
+            <i class="fab fa-whatsapp text-2xl mr-2"></i>WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="bg-gray-900 text-white py-4 text-center text-sm">
+      <p>Todos os direitos reservados &copy; Rede Mastery</p>
+    </footer>
+
+    <!-- SCRIPTS -->
+     <!-- Video.js JS -->
+    <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
