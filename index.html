@@ -14,7 +14,7 @@
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#FF5722" />
     <meta property="og:title" content="Dragon Block Servidor - Rede Mastery" />
-    <meta property="og:description" content="Junte-se um dos maiores servidor de Dragon Block do mundo com mais de 100 jogadores online!" />
+    <meta property="og:description" content="Junte-se um dos maiores servidor de Dragon Block do mundo com mais de 300 jogadores online!" />
     <meta property="og:image" content="assets/images/main.png" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Rede Mastery" />
@@ -161,7 +161,7 @@
             <img src="assets/images/check.png" alt="Goku Icon" class="w-16 h-16 mr-4" />
             <div>
               <h3 class="text-xl font-bold">Jogadores</h3>
-              <p class="text-gray-700">Temos diariamente mais de 200 players ativos em nosso discord!</p>
+              <p class="text-gray-700">Temos diariamente mais de 300 players ativos em nosso discord!</p>
             </div>
           </div>
           <div class="flex items-center bg-gray-100 p-4 rounded-lg transition duration-300 transform hover:scale-105" data-aos="fade-up" data-aos-delay="400">
@@ -197,36 +197,35 @@
     </section>
 
     <section class="bg-orange-500 text-white text-center py-20 px-4 sm:px-6 lg:px-8" data-aos="fade-up">
-      <div class="max-w-4xl mx-auto">
+      <div class="max-w-4xl mx-auto px-4">
         <h2 class="text-3xl md:text-4xl font-bold" data-aos="fade-right" data-aos-delay="200">
-          JUNTE-SE A MAIS DE 200 JOGADORES EM NOSSA COMUNIDADE
+          JUNTE-SE A MAIS DE 300 JOGADORES EM NOSSA COMUNIDADE
         </h2>
         <p class="mt-2 text-lg md:text-xl" data-aos="fade-right" data-aos-delay="400">
           TÁ ESPERANDO O QUÊ?
         </p>
-        <!-- Em seu HTML -->
-        <video
-          id="advanced-video"
-          class="video-js vjs-big-play-centered vjs-theme-city mx-auto rounded-lg shadow-lg"
-          preload="auto"
-          width="auto"
-          height="315"
-          poster="assets/images/video-poster.jpg"
-          data-setup='{
-            "autoplay": false,
-            "controls": true,
-            "bigPlayButton": true,
-            "playbackRates": [0.5,1,1.5,2],
-            "controlBar": {
-              "children": ["playToggle"]
-            }
-          }'
+        <!-- Container responsivo para o vídeo -->
+        <div class="mt-8 relative w-full aspect-video mx-auto rounded-lg shadow-lg">
+          <video
+            id="advanced-video"
+            class="video-js vjs-big-play-centered vjs-theme-city absolute inset-0 w-full h-full rounded-lg"
+            poster="assets/images/video-poster.jpg"
+            data-setup='{
+              "autoplay": false,
+              "controls": true,
+              "bigPlayButton": true,
+              "playbackRates": [0.5,1,1.5,2],
+              "controlBar": {
+                "children": ["playToggle"]
+              }
+            }'
           >
-          <source src="assets/videos/abertura.mp4" type="video/mp4" />
-          <p class="vjs-no-js">
-            Ative o JavaScript e use um navegador que suporte HTML5 para ver este vídeo.
-          </p>
-        </video>
+            <source src="assets/videos/abertura.mp4" type="video/mp4" />
+            <p class="vjs-no-js">
+              Ative o JavaScript e utilize um navegador que suporte HTML5 para ver este vídeo.
+            </p>
+          </video>
+        </div>
         <p class="mt-8 text-lg" data-aos="fade-up" data-aos-delay="800">
           Estamos aqui para te ajudar a acessar o servidor sem complicações.
         </p>
@@ -239,6 +238,7 @@
           </a>
         </div>
       </div>
+
     </section>
 
     <!-- RODAPÉ -->
