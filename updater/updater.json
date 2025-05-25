@@ -1,4 +1,6 @@
 {
-    "version": "1.0.0",
-    "url": "https://redemastery.site/updater/mods/mods.zip"
+    "version": "0.0.1",
+    "url": "https://redemastery.site/updater/mods/mods.zip",
+    "shop_link":"https://loja.redemastery.com/",
+    "discord_invite":"https://discord.redemastery.site"
 }
